@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/default}">
+
+<th:block layout:fragment="customTitle">
+	<title>ksmart</title>
+</th:block>
+<th:block layout:fragment="customContents">
+	<div class="col-md-6 offset-md-3">
+	    <div class="card-body">
+	        <h3 class="mb-0">boardAdd</h3>
+	    </div>
+	    <div class="card-body">
+	        <form id="boardAddForm" class="form" role="form" autocomplete="off" action="/boardAdd" method="post" enctype="multipart/form-data">
+	            <div class="form-group">
+	                <label for="inputName">Password</label>
+	                <input type="password" class="form-control" name="boardPw">
+	            </div>
+	            <div class="form-group">
+	                <label for="inputName">Title</label>
+	                <input class="form-control" name="boardTitle" id="boardTitle">
+	            </div>
+	            <div class="form-group">
+	                <label for="inputName">Content</label>
+	                <textarea class="form-control" name="boardContent" rows="5" cols="50" ></textarea>
+	            </div>
+	            <div class="form-group">
+	                <label for="inputName">Name</label>
+	                <input type="text" class="form-control" name="boardUser">
+	            </div>
+	            <div class="form-group">
+	            	<input class="btn btn-success btn-sm" type="submit" value="글입력"/>&nbsp;
+	            	<input class="btn btn-success btn-sm float-right" type="reset" value="초기화"/>
+	            </div>
+	            
+	        </form>
+	    </div>
+	</div>
+</th:block>
+</html>
